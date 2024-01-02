@@ -22,3 +22,19 @@ test("testing for inpu Box", () => {
   expect(type).toHaveAttribute("name", "username");
   expect(type).toHaveAttribute("type", "text");
 });
+
+describe("UI Based Testing", () => {
+  test("testing for inpu Box", () => {
+    render(<App />);
+    let type = screen.getByRole("textbox");
+    expect(type).toHaveAttribute("name", "username");
+  });
+
+  test("testing for inpu Box", () => {
+    render(<App />);
+    let placeholder = screen.getByPlaceholderText("Enter User Name");
+    expect(placeholder).toBeInTheDocument();
+  });
+});
+// describe.only  ---- testing for only this case
+// describe.skip  ---- testing for skip this case
