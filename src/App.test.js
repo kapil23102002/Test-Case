@@ -3,6 +3,12 @@ import App from "./App";
 
 test("testing for text", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react123/i);
-  expect(linkElement).toBeInTheDocument();
+  const text = screen.getByText(/learn react123/i);
+  expect(text).toBeInTheDocument();
+});
+
+test("testing for Image Title", () => {
+  render(<App />);
+  const title = screen.getByTitle("React logo");
+  expect(title).toBeInTheDocument();
 });
