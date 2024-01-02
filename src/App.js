@@ -5,6 +5,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <input type="text" placeholder="Enter User Name" name="username" />
+
         <img title="React logo" src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,6 +19,7 @@ function App() {
         >
           Learn React123
         </a>
+        <br />
       </header>
     </div>
   );
