@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
 
 test("testing for text", () => {
@@ -38,3 +38,10 @@ describe("UI Based Testing", () => {
 });
 // describe.only  ---- testing for only this case
 // describe.skip  ---- testing for skip this case
+
+test("testing for onChange event", () => {
+  render(<App />);
+  let event = screen.getByRole("textbox");
+  fireEvent.change(event, { target: { value: "kapil" } });
+  expect(event.value).toBe("kapil");
+});
