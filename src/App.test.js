@@ -1,3 +1,12 @@
+// // we can create test files like this ----
+// (1) app.test.js
+// (2) app.test.jsx
+// (3) app.spec.js
+// (4) app.spec.jsx
+
+// // we can do All test file are keep in their on folder and the folder name is and without the name of test.js ---
+// //(1) __tests__
+
 import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
 
