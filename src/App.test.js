@@ -45,3 +45,10 @@ test("testing for onChange event", () => {
   fireEvent.change(event, { target: { value: "kapil" } });
   expect(event.value).toBe("kapil");
 });
+
+test("testing for onClick event", () => {
+  render(<App />);
+  let btn = screen.getByRole("button");
+  fireEvent.click(btn);
+  expect(screen.getByText("updated data")).toBeInTheDocument();
+});

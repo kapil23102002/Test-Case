@@ -4,6 +4,7 @@ import { useState } from "react";
 
 function App() {
   const [value, setValue] = useState("");
+  const [data, setData] = useState("");
   return (
     <div className="App">
       <header className="App-header">
@@ -17,9 +18,14 @@ function App() {
           }}
         />
         <img title="React logo" src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <button
+          onClick={() => {
+            setData("updated data");
+          }}
+        >
+          Show Data
+        </button>
+        <p>{data}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
